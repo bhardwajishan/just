@@ -1,0 +1,43 @@
+{
+  "name": "suite-compile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_EXTRA_CA_CERTS=./zscaler-ca.pem next dev",
+    "build": "NODE_EXTRA_CA_CERTS=./zscaler-ca.pem next build",
+    "start": "NODE_EXTRA_CA_CERTS=./zscaler-ca.pem next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-scroll-area": "^1.2.10",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@supabase/ssr": "^0.9.0",
+    "@supabase/supabase-js": "^2.99.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.577.0",
+    "mammoth": "^1.12.0",
+    "next": "14.2.35",
+    "next-themes": "^0.4.6",
+    "pdf-parse": "^1.1.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ── Light theme (default) ──────────────────────────────────────────────── */
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 226 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 226 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 226 50% 10%;
+
+    --primary: 173 100% 38%;          /* teal #00C2A8 — slightly deeper for contrast on white */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 226 50% 15%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 210 20% 94%;
+    --accent-foreground: 226 50% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 173 100% 38%;
+    --radius: 0.5rem;
+  }
+
+  /* ── Dark theme ─────────────────────────────────────────────────────────── */
+  .dark {
+    --background: 226 50% 8%;          /* #0A0F1E */
+    --foreground: 210 30% 92%;
+
+    --card: 226 42% 11%;
+    --card-foreground: 210 30% 92%;
+
+    --popover: 226 42% 13%;
+    --popover-foreground: 210 30% 92%;
+
+    --primary: 173 100% 42%;           /* #00D4B4 */
+    --primary-foreground: 226 50% 8%;
+
+    --secondary: 226 30% 17%;
+    --secondary-foreground: 210 30% 92%;
+
+    --muted: 226 30% 15%;
+    --muted-foreground: 220 18% 55%;
+
+    --accent: 226 30% 17%;
+    --accent-foreground: 210 30% 92%;
+
+    --destructive: 0 62.8% 52%;
+    --destructive-foreground: 210 30% 92%;
+
+    --border: 226 28% 20%;
+    --input: 226 28% 18%;
+    --ring: 173 100% 42%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-dm-sans, system-ui, sans-serif);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sora, system-ui, sans-serif);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ── Fix browser autofill overriding dark/light theme input background ────── */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px hsl(var(--input)) inset !important;
+  -webkit-text-fill-color: hsl(var(--foreground)) !important;
+  caret-color: hsl(var(--foreground)) !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
