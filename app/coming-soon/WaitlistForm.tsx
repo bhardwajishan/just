@@ -23,11 +23,10 @@ export function WaitlistForm({ isDark }: WaitlistFormProps) {
     setSubmitted(true);
   }
 
-  const inputBg     = isDark ? '#0D1424'                     : '#FFFFFF';
-  const inputBorder = isDark ? 'rgba(255,255,255,0.12)'      : 'rgba(0,0,0,0.15)';
+  const inputBg     = isDark ? '#0D1424'                : '#FFFFFF';
+  const inputBorder = isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.15)';
   const inputFocus  = '#00D4B4';
-  const inputText   = isDark ? '#E2E8F0'                     : '#0A0F1E';
-  const placeholder = isDark ? 'rgba(240,240,240,0.35)'      : 'rgba(10,15,30,0.38)';
+  const inputText   = isDark ? '#E2E8F0'                : '#0A0F1E';
 
   if (submitted) {
     return (

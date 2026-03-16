@@ -101,7 +101,6 @@ function TextField({
 }
 
 function RadioCard({
-  value,
   label,
   icon,
   selected,

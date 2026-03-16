@@ -76,6 +76,7 @@ export default async function ModuleDetailPage({ params }: Props) {
   };
 
   // Strip encrypted token before passing module to client component
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { figma_access_token: _stripped, ...safeModuleData } = moduleData;
 
   return (

@@ -61,6 +61,7 @@ function UsageBar({ label, sublabel, value, max }: BarItem) {
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function UsageBanner({ userId: _userId }: UsageBannerProps) {
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);

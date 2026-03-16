@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function NewProjectDialog({ userId: _userId }: { userId: string }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
